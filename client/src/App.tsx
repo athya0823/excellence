@@ -1,7 +1,3 @@
-import AppRoutes from "./routes/AppRoutes";
-
-function App() {
-  return <AppRoutes />;
+export default function App() {
+  return null; // App is not used when RouterProvider is in main.tsx
 }
-
-export default App;
