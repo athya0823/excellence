@@ -26,57 +26,86 @@ export default function Courses() {
   }, [query, badge]);
 
   return (
-    <Container className="py-12">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold">Courses</h1>
-          <p className="mt-2 text-sm text-neutral-600">
-            Temporary course data for Phase-1 UI. Admin management will come later.
-          </p>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-3">
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search courses..."
-            className="rounded-xl border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black"
-          />
-          <select
-            value={badge}
-            onChange={(e) => setBadge(e.target.value)}
-            className="rounded-xl border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black"
-          >
-            {badges.map((b) => (
-              <option key={b} value={b}>
-                {b}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((c) => (
-          <Link
-            key={c.slug}
-            to={`/courses/${c.slug}`}
-            className="rounded-2xl border border-neutral-200 bg-white hover:shadow-sm transition overflow-hidden"
-          >
-            <div className="h-36 bg-neutral-100" />
-            <div className="p-5">
-              <div className="flex items-center justify-between gap-3">
-                <div className="font-semibold">{c.title}</div>
-                <Badge>{c.badge}</Badge>
-              </div>
-              <div className="mt-2 text-sm text-neutral-600">{c.description}</div>
-              <div className="mt-4 text-xs text-neutral-500">
-                {c.duration} • {c.mode}
-              </div>
+    <div>
+      {/* Header strip */}
+      <section className="bg-surface-muted border-b border-neutral-200">
+        <Container className="py-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <Badge variant="accent">Courses</Badge>
+              <h1 className="mt-4 text-3xl md:text-4xl font-extrabold text-text-heading">
+                Programs at NEET Excellence Medical Academy
+              </h1>
+              {/* <p className="mt-3 text-sm md:text-base text-text-body max-w-2xl">
+                Temporary course data for Phase-1 UI. Admin management will come later.
+              </p> */}
             </div>
-          </Link>
-        ))}
-      </div>
-    </Container>
+
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search courses..."
+                className="w-full sm:w-64 rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-accentSoft"
+              />
+              <select
+                value={badge}
+                onChange={(e) => setBadge(e.target.value)}
+                className="w-full sm:w-48 rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-accentSoft"
+              >
+                {badges.map((b) => (
+                  <option key={b} value={b}>
+                    {b}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Grid */}
+      <section className="py-12">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((c) => (
+              <Link
+                key={c.slug}
+                to={`/courses/${c.slug}`}
+                className="rounded-2xl border border-neutral-200 bg-white hover:shadow-soft transition overflow-hidden"
+              >
+                <div className="h-36 bg-brand-accentSoft" />
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="font-extrabold text-text-heading leading-snug">
+                      {c.title}
+                    </div>
+                    <Badge variant="outline">{c.badge}</Badge>
+                  </div>
+
+                  <div className="mt-2 text-sm text-text-body leading-relaxed line-clamp-3">
+                    {c.description}
+                  </div>
+
+                  <div className="mt-4 text-xs text-text-muted">
+                    {c.duration} • {c.mode}
+                  </div>
+
+                  <div className="mt-5 inline-flex items-center text-sm font-semibold text-brand-primary underline underline-offset-4">
+                    View Details →
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {filtered.length === 0 ? (
+            <div className="mt-10 rounded-2xl border border-neutral-200 bg-surface-muted p-6 text-text-body">
+              No courses found. Try changing the filter or search keyword.
+            </div>
+          ) : null}
+        </Container>
+      </section>
+    </div>
   );
 }

@@ -5,3 +5,23 @@
 :root {
   color-scheme: light;
 }
+
+
+.hero-bg-motion {
+  background-image: url("/src/assets/hero/hero-bg.jpg");
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: heroMove 25s ease-in-out infinite alternate;
+  transform: scale(1.05);
+}
+
+/* Smooth slow movement */
+@keyframes heroMove {
+  0% {
+    background-position: center left;
+  }
+  100% {
+    background-position: center right;
+  }
+}

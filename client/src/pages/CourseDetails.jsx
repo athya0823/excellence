@@ -25,7 +25,7 @@ export default function CourseDetails() {
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
           <div className="flex items-center gap-3">
-            <Badge>{course.badge}</Badge>
+            <Badge variant="accent">{course.badge}</Badge>
             <div className="text-xs text-neutral-500">
               {course.duration} • {course.mode}
             </div>

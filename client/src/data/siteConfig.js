@@ -3,13 +3,13 @@ export const siteConfig = {
   tagline: "From Aspirant to Doctor",
 
   // Contact (from client)
-  phone: "+91 7903537573",
-  email: "nishant.kumar.or@gmail.com",
-  whatsapp: "https://wa.me/917903537573", // derived from phone
+  phone: "+91 9075120325, +91 9067233111",
+  email: "nema.info7@gmail.com",
+  whatsapp: "https://wa.me/919075120325", // derived from phone
 
-  addressShort: "Dapodi, Pune (411012)",
+  addressShort: "Shivaji Nagar, Pune (411005)",
   fullAddress:
-    "Dapodi near hero showroom building Ganesh samrudhhi, PUNE CITY, Maharashtra, India 411012",
+    "Shivaji Nagar, Pune (411005)",
 
   contactPerson: "nishant kumar singh"
 };

@@ -5,6 +5,7 @@ import Input from "../components/ui/Input";
 import Textarea from "../components/ui/Textarea";
 import { siteConfig } from "../data/siteConfig";
 import { apiPost } from "../app/api";
+import Badge from "../components/ui/Badge";
 
 const initial = { fullName: "", phone: "", email: "", message: "" };
 
@@ -58,7 +59,7 @@ export default function Contact() {
       <div className="grid gap-8 lg:grid-cols-3">
         {/* Left: Contact info */}
         <div className="lg:col-span-1">
-          <h1 className="text-2xl font-bold">Contact Us</h1>
+           <Badge variant="accent">Contact Us</Badge>
           <p className="mt-2 text-sm text-neutral-600">
             Reach us using the details below. You can also send a message using the form.
           </p>

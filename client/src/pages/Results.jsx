@@ -5,6 +5,8 @@ import Badge from "../components/ui/Badge";
 import TopperCard from "../components/results/TopperCard";
 import { resultsByYear } from "../data/results";
 import { Link } from "react-router-dom";
+import results2025Banner from "../assets/results/thumbnail.png";
+
 
 export default function Results() {
   const years = useMemo(() => resultsByYear.map((x) => x.year), []);
@@ -15,18 +17,18 @@ export default function Results() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-neutral-50 border-b border-neutral-200">
+      <section className="bg-surface-muted border-b border-neutral-200">
         <Container className="py-12 md:py-16">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <Badge>Results & Toppers</Badge>
+              <Badge variant="accent">Results & Toppers</Badge>
               <h1 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">
-                Our Students’ Success Stories
+                Our Mentored Students
               </h1>
-              <p className="mt-3 text-neutral-600 max-w-2xl leading-relaxed">
+              {/* <p className="mt-3 text-neutral-600 max-w-2xl leading-relaxed">
                 Temporary results UI for Phase-1. We will replace names, ranks, scores, and photos
                 with the institute’s official data.
-              </p>
+              </p> */}
             </div>
 
             <div className="flex gap-3">
@@ -111,6 +113,17 @@ export default function Results() {
               <TopperCard key={`${active.year}-${t.name}-${t.rank}`} topper={t} />
             ))}
           </div>
+
+          {/* 2025 Result Banner BELOW cards */}
+          {Number(active.year) === 2025 && (
+            <div className="mt-10 rounded-3xl border border-neutral-200 bg-white p-4 md:p-6 shadow-soft">
+              <img
+                src={results2025Banner}
+                alt="NEET 2025 Results - NEET Excellence Medical Academy"
+                className="w-full rounded-2xl object-contain"
+              />
+            </div>
+          )}
 
           {/* Note */}
           <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-sm text-neutral-700">

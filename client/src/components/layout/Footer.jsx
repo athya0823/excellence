@@ -25,8 +25,8 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold">Contact</div>
             <div className="mt-2 text-sm text-neutral-600">
-              Phone: +91 7903537573<br />
-              Email: nishant.kumar.or@gmail.com
+              Phone: +91 9075120325, +91 9067233111<br />
+              Email: Nema@gmail.com
             </div>
           </div>
         </div>

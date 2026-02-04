@@ -4,6 +4,7 @@ import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
 import Textarea from "../components/ui/Textarea";
 import { apiPost } from "../app/api";
+import Badge from "../components/ui/Badge";
 
 const initial = {
   fullName: "",
@@ -51,8 +52,8 @@ export default function Admission() {
 
   return (
     <Container className="py-12">
-      <div className="max-w-3xl">
-        <h1 className="text-2xl font-bold">Admission / Enquiry</h1>
+      <div className="max-w-3xl ">
+         <Badge variant="accent">Admission / Enquiry</Badge>
         <p className="mt-2 text-sm text-neutral-600">
           Fill the form below. We’ll contact you with details (temporary Phase-1 flow).
         </p>
