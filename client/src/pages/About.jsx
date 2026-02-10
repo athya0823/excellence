@@ -4,38 +4,42 @@ import Badge from "../components/ui/Badge";
 export default function About() {
   return (
     <div>
-      <section className="bg-surface-muted border-b border-neutral-200">
-        <Container className="py-14">
-          <Badge variant="accent">About NEMA</Badge>
-          <h1 className="mt-4 text-3xl md:text-5xl font-extrabold text-text-heading">
-            NEET Excellence Medical Academy
-          </h1>
+      <section className="relative bg-page-hero bg-cover bg-center bg-fixed border-b border-neutral-200">
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-black/60" />
 
-          <p className="mt-5 text-text-body leading-relaxed">
-            NEET Excellence Medical Academy is a specialised training institute for NEET (UG),
-            led by a team of highly experienced faculties with over 15 years of proven expertise
-            in guiding medical aspirants.
-          </p>
+  <Container className="relative py-14 text-white">
+    <Badge variant="accent">About NEMA</Badge>
 
-          <p className="mt-4 text-text-body leading-relaxed">
-            We focus on strong concept building, exam-oriented teaching, and result-driven preparation.
-            Over the years, we have successfully mentored numerous students who have achieved their goals
-            of securing admission into prestigious medical institutions such as All India Institute of Medical Sciences,
-            Jawaharlal Institute of Postgraduate Medical Education and Research, Byramjee Jeejeebhoy Medical College,
-            and other top Government Medical Colleges across India.
-          </p>
+    <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
+      NEET Excellence Medical Academy
+    </h1>
 
-          <p className="mt-4 text-text-body leading-relaxed">
-            At NEET Excellence Medical Academy, we believe that quality education requires personal attention.
-            That’s why we maintain small batch sizes, ensuring individual mentoring, regular performance analysis,
-            and continuous academic support for every student.
-          </p>
-        </Container>
-      </section>
+    <p className="mt-5 text-neutral-200 leading-relaxed max-w-3xl">
+      NEET Excellence Medical Academy is a specialised training institute for NEET (UG),
+      led by a team of highly experienced faculties with over 15 years of proven expertise
+      in guiding medical aspirants.
+    </p>
+
+    <p className="mt-4 text-neutral-200 leading-relaxed max-w-3xl">
+      We focus on strong concept building, exam-oriented teaching, and result-driven preparation.
+      Over the years, we have successfully mentored numerous students who have achieved their goals
+      of securing admission into prestigious medical institutions such as All India Institute of Medical Sciences,
+      Jawaharlal Institute of Postgraduate Medical Education and Research, Byramjee Jeejeebhoy Medical College,
+      and other top Government Medical Colleges across India.
+    </p>
+
+    <p className="mt-4 text-neutral-200 leading-relaxed max-w-3xl">
+      At NEET Excellence Medical Academy, we believe that quality education requires personal attention.
+      That’s why we maintain small batch sizes, ensuring individual mentoring, regular performance analysis,
+      and continuous academic support for every student.
+    </p>
+  </Container>
+</section>
 
       <section className="py-12">
         <Container>
-          <h2 className="text-2xl font-bold text-text-heading">Our program offers</h2>
+          <h2 className="text-2xl font-bold text-text-heading">Our Program Offers</h2>
           <ul className="mt-5 grid gap-3 md:grid-cols-2">
             {[
               "Systematic and complete syllabus coverage",

@@ -51,13 +51,30 @@ export default function Admission() {
   }
 
   return (
+    <div>
+       <section className="relative border-b border-neutral-200"
+        style={{
+          backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}>
+          <div className="absolute inset-0 bg-black/50"></div>
+      
+        <div className="relative z-10">
+                    <Container className="py-14 text-white">
+                          <Badge variant="accent">Admission / Enquiry</Badge>
+                          <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
+                            Fill the form below. We’ll contact you with details.
+                          </h1>
+                          {/* <p className="mt-4 text-text-body">
+                            NEET-focused strategies, tips, and guidance.
+                          </p> */}
+                      </Container>
+                      </div>
+                  </section>
+
     <Container className="py-12">
       <div className="max-w-3xl ">
-         <Badge variant="accent">Admission / Enquiry</Badge>
-        <p className="mt-2 text-sm text-neutral-600">
-          Fill the form below. We’ll contact you with details (temporary Phase-1 flow).
-        </p>
-
         <form onSubmit={onSubmit} className="mt-8 grid gap-5">
           <Input
             label="Full Name *"
@@ -113,7 +130,7 @@ export default function Admission() {
           />
 
           <div className="flex items-center gap-3">
-            <Button type="submit" disabled={status.type === "loading"}>
+            <Button className="bg-brand-primary hover:text-black rounded-xl border border-neutral-300 hover:bg-white" type="submit" disabled={status.type === "loading"}>
               Submit Enquiry
             </Button>
 
@@ -134,5 +151,6 @@ export default function Admission() {
         </form>
       </div>
     </Container>
+    </div>
   );
 }

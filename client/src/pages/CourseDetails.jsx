@@ -31,7 +31,7 @@ export default function CourseDetails() {
             </div>
           </div>
 
-          <h1 className="mt-3 text-3xl font-extrabold">{course.title}</h1>
+          <h1 className="mt-3 text-3xl font-bold">{course.title}</h1>
           <p className="mt-3 text-neutral-600 leading-relaxed">
             {course.description}
           </p>
@@ -58,7 +58,7 @@ export default function CourseDetails() {
 
             <div className="mt-6 flex gap-3">
               <Link to="/admission" className="flex-1">
-                <Button className="w-full">Enquire</Button>
+                <Button className="w-full bg-brand-primary hover:text-black rounded-xl border border-neutral-300 hover:bg-white">Enquire</Button>
               </Link>
               <Link to="/courses" className="flex-1">
                 <button className="w-full rounded-xl px-4 py-2 text-sm font-semibold border border-neutral-300 hover:bg-neutral-50">

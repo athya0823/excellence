@@ -55,14 +55,37 @@ export default function Contact() {
   }
 
   return (
+  <div>
+    <section className="relative border-b border-neutral-200"
+  style={{
+    backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}>
+    <div className="absolute inset-0 bg-black/50"></div>
+
+  <div className="relative z-10">
+              <Container className="py-14 text-white">
+                    <Badge variant="accent">Admission / Enquiry</Badge>
+                    <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
+                      Fill the form below. We’ll contact you with details.
+                    </h1>
+                    {/* <p className="mt-4 text-text-body">
+                      NEET-focused strategies, tips, and guidance.
+                    </p> */}
+                </Container>
+                </div>
+            </section>
+
+
     <Container className="py-12">
       <div className="grid gap-8 lg:grid-cols-3">
         {/* Left: Contact info */}
         <div className="lg:col-span-1">
-           <Badge variant="accent">Contact Us</Badge>
+           {/* <Badge variant="accent">Contact Us</Badge>
           <p className="mt-2 text-sm text-neutral-600">
             Reach us using the details below. You can also send a message using the form.
-          </p>
+          </p> */}
 
           <div className="mt-6 rounded-3xl border border-neutral-200 bg-white p-6">
             <div className="text-sm font-semibold text-neutral-600">Contact Person</div>
@@ -101,7 +124,7 @@ export default function Contact() {
                   href={siteConfig.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-neutral-300 px-4 py-2 text-sm font-semibold hover:bg-neutral-50 w-full"
+                  className="bg-brand-primary text-white hover:text-black inline-flex items-center justify-center rounded-xl border border-neutral-300 px-4 py-2 text-sm font-semibold hover:bg-white w-full"
                 >
                   Chat on WhatsApp
                 </a>
@@ -110,7 +133,7 @@ export default function Contact() {
           </div>
 
           {/* Map placeholder */}
-          <div className="mt-6 rounded-3xl border border-neutral-200 bg-neutral-50 overflow-hidden">
+          {/* <div className="mt-6 rounded-3xl border border-neutral-200 bg-neutral-50 overflow-hidden">
             <div className="p-4 border-b border-neutral-200 bg-white">
               <div className="font-semibold">Location Map</div>
               <div className="text-xs text-neutral-500">
@@ -120,7 +143,27 @@ export default function Contact() {
             <div className="h-48 bg-neutral-100 flex items-center justify-center text-xs text-neutral-500">
               Map Placeholder
             </div>
-          </div>
+          </div> */}
+          <div className="mt-6 rounded-3xl border border-neutral-200 bg-neutral-50 overflow-hidden">
+  <div className="p-4 border-b border-neutral-200 bg-white">
+    <div className="font-semibold">Location Map</div>
+    <div className="text-xs text-neutral-500">
+      Find us on Google Maps
+    </div>
+  </div>
+
+  <div className="h-64">
+    <iframe
+      title="SuPrabha Academy Location"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60513.72497826915!2d73.7560908!3d18.5691776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c11589d7310b%3A0xdaaf06695b9d491d!2sSuPrabha%20Academy!5e0!3m2!1sen!2sin!4v1770660416021!5m2!1sen!2sin"
+      className="w-full h-full border-0"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+</div>
+
         </div>
 
         {/* Right: Form */}
@@ -167,7 +210,7 @@ export default function Contact() {
               />
 
               <div className="flex items-center gap-3">
-                <Button type="submit" disabled={status.type === "loading"}>
+                <Button className="bg-brand-primary hover:text-black rounded-xl border border-neutral-300 hover:bg-white" type="submit" disabled={status.type === "loading"}>
                   Send Message
                 </Button>
 
@@ -190,5 +233,6 @@ export default function Contact() {
         </div>
       </div>
     </Container>
+  </div>
   );
 }

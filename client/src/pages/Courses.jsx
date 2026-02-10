@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../components/ui/Container";
 import Badge from "../components/ui/Badge";
 import { courses } from "../data/courses";
+import class1Img from "../assets/course/class-1.jpg";
 
 export default function Courses() {
   const [query, setQuery] = useState("");
@@ -28,12 +29,19 @@ export default function Courses() {
   return (
     <div>
       {/* Header strip */}
-      <section className="bg-surface-muted border-b border-neutral-200">
-        <Container className="py-12">
+      <section className="relative border-b border-neutral-200"
+  style={{
+    backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}>
+    <div className="absolute inset-0 bg-black/50"></div>
+    <div className="relative z-10">
+        <Container className="py-14 text-white">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <Badge variant="accent">Courses</Badge>
-              <h1 className="mt-4 text-3xl md:text-4xl font-extrabold text-text-heading">
+              <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
                 Programs at NEET Excellence Medical Academy
               </h1>
               {/* <p className="mt-3 text-sm md:text-base text-text-body max-w-2xl">
@@ -46,12 +54,12 @@ export default function Courses() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search courses..."
-                className="w-full sm:w-64 rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-accentSoft"
+                className="w-full sm:w-64 rounded-xl border text-black border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-accentSoft"
               />
               <select
                 value={badge}
                 onChange={(e) => setBadge(e.target.value)}
-                className="w-full sm:w-48 rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-accentSoft"
+                className="w-full sm:w-48 rounded-xl border text-black border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-accentSoft"
               >
                 {badges.map((b) => (
                   <option key={b} value={b}>
@@ -62,6 +70,7 @@ export default function Courses() {
             </div>
           </div>
         </Container>
+        </div>
       </section>
 
       {/* Grid */}
@@ -69,15 +78,23 @@ export default function Courses() {
         <Container>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map((c) => (
+              
               <Link
                 key={c.slug}
                 to={`/courses/${c.slug}`}
                 className="rounded-2xl border border-neutral-200 bg-white hover:shadow-soft transition overflow-hidden"
               >
-                <div className="h-36 bg-brand-accentSoft" />
+              <div className="relative h-36 overflow-hidden">
+                <img
+                  src={class1Img}
+                  alt="Class 1"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+          
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3">
-                    <div className="font-extrabold text-text-heading leading-snug">
+                    <div className="font-bold text-text-heading leading-snug">
                       {c.title}
                     </div>
                     <Badge variant="outline">{c.badge}</Badge>

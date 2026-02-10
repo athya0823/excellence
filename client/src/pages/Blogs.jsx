@@ -133,17 +133,33 @@ const blogs = [
 export default function Blogs() {
   return (
     <div>
-      <section className="bg-surface-muted border-b border-neutral-200">
+      {/* <section className="bg-surface-muted border-b border-neutral-200">
         <Container className="py-14">
           <Badge variant="accent">Blog</Badge>
-          <h1 className="mt-4 text-3xl md:text-5xl font-extrabold text-text-heading">
+          <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-text-heading">
             Latest Articles
           </h1>
           <p className="mt-4 text-text-body">
             NEET-focused strategies, tips, and guidance.
           </p>
         </Container>
-      </section>
+      </section> */}
+      <section className="relative bg-page-hero bg-cover bg-center border-b border-neutral-200">
+  {/* overlay */}
+  <div className="absolute inset-0 bg-black/60" />
+
+  <Container className="relative py-14">
+    <Badge variant="accent">Blog</Badge>
+
+    <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">
+      Latest Articles
+    </h1>
+
+    <p className="mt-4 text-neutral-200 max-w-2xl">
+      NEET-focused strategies, tips, and guidance.
+    </p>
+  </Container>
+</section>
 
       <section className="py-12">
         <Container>

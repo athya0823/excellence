@@ -17,12 +17,20 @@ export default function Results() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-surface-muted border-b border-neutral-200">
-        <Container className="py-12 md:py-16">
+      <section className="relative border-b border-neutral-200"
+  style={{
+    backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}>
+     <div className="absolute inset-0 bg-black/50"></div>
+
+  <div className="relative z-10">
+        <Container className="py-14 text-white">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <Badge variant="accent">Results & Toppers</Badge>
-              <h1 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">
+              <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
                 Our Mentored Students
               </h1>
               {/* <p className="mt-3 text-neutral-600 max-w-2xl leading-relaxed">
@@ -33,11 +41,11 @@ export default function Results() {
 
             <div className="flex gap-3">
               <Link to="/admission">
-                <Button>Enquire Now</Button>
+                <Button className="bg-brand-primary hover:text-black hover:bg-white">Enquire Now</Button>
               </Link>
               <a
                 href="#yearwise"
-                className="rounded-xl px-4 py-2 text-sm font-semibold border border-neutral-300 hover:bg-white"
+                className="rounded-xl px-4 py-2 hover:text-black text-sm font-semibold border border-neutral-300 hover:bg-white"
               >
                 View Year-wise
               </a>
@@ -51,6 +59,7 @@ export default function Results() {
             <Highlight title="Selections" value="100+" note="(Demo)" />
           </div>
         </Container>
+        </div>
       </section>
 
       {/* Year tabs + Section */}
@@ -73,8 +82,8 @@ export default function Results() {
                   className={`rounded-xl px-4 py-2 text-sm font-semibold border transition
                     ${
                       activeYear === y
-                        ? "bg-black text-white border-black"
-                        : "bg-white border-neutral-300 hover:bg-neutral-50"
+                        ? "bg-white text-black border-brand-primary"
+                        : "bg-brand-primary text-white border-neutral-300 hover:text-black hover:bg-neutral-50"
                     }`}
                 >
                   {y}
@@ -101,14 +110,14 @@ export default function Results() {
                   Contact
                 </Link>
                 <Link to="/admission">
-                  <Button>Admission</Button>
+                  <Button className="bg-brand-primary hover:text-black rounded-xl border border-neutral-300 hover:bg-white ">Admission</Button>
                 </Link>
               </div>
             </div>
           </div>
 
           {/* Topper Cards */}
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
             {active.toppers.map((t) => (
               <TopperCard key={`${active.year}-${t.name}-${t.rank}`} topper={t} />
             ))}
@@ -144,7 +153,7 @@ export default function Results() {
               </div>
             </div>
             <Link to="/admission">
-              <Button className="px-6 py-3">Enquire Now</Button>
+              <Button className="bg-brand-primary rounded-xl border border-neutral-300 hover:text-black hover:bg-white">Enquire Now</Button>
             </Link>
           </div>
         </Container>
@@ -155,14 +164,22 @@ export default function Results() {
 
 function Highlight({ title, value, note }) {
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-      <div className="text-sm font-semibold text-neutral-600">{title}</div>
-      <div className="mt-2 text-2xl font-extrabold">
-        {value} <span className="text-sm font-semibold text-neutral-500">{note}</span>
+    <div className="rounded-lg border border-white/20 bg-white/80 backdrop-blur-sm p-2 shadow-soft">
+      <div className="text-sm font-semi text-neutral-700">
+        {title}
       </div>
+
+      <div className="mt-2 text-lg font-bold text-neutral-900">
+        {value}
+        <span className="ml-1 text-sm font-lg text-neutral-500">
+          {note}
+        </span>
+      </div>
+
       <div className="mt-2 text-xs text-neutral-500">
-        Replace with official institute data later.
+        Official data will be updated
       </div>
     </div>
   );
 }
+

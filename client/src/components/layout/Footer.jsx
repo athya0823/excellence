@@ -2,37 +2,58 @@ import Container from "../ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-white">
-      <Container className="py-10">
-        <div className="grid gap-6 md:grid-cols-3">
+    <footer className="bg-neutral-950 text-neutral-200">
+      <Container className="py-12">
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Brand */}
           <div>
-            <div className="text-sm font-bold">NEET Excellence Medical Academy</div>
-            <div className="text-sm text-neutral-600 mt-2">
-              Temporary footer content — will be replaced with final details.
+            <div className="text-sm font-extrabold text-white">
+              NEET Excellence Medical Academy
+            </div>
+            <div className="mt-3 text-sm text-neutral-400 leading-relaxed">
+              Temporary footer content — will be replaced with final institute
+              description, address, and social links.
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <div className="text-sm font-semibold">Quick Links</div>
-            <ul className="mt-2 space-y-1 text-sm text-neutral-600">
-              <li>Courses</li>
-              <li>Faculty</li>
-              <li>Results</li>
-              <li>Admission</li>
+            <div className="text-sm font-semibold text-white">Quick Links</div>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li className="text-neutral-400 hover:text-white transition cursor-pointer">
+                Courses
+              </li>
+              <li className="text-neutral-400 hover:text-white transition cursor-pointer">
+                Faculty
+              </li>
+              <li className="text-neutral-400 hover:text-white transition cursor-pointer">
+                Results
+              </li>
+              <li className="text-neutral-400 hover:text-white transition cursor-pointer">
+                Admission
+              </li>
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
-            <div className="text-sm font-semibold">Contact</div>
-            <div className="mt-2 text-sm text-neutral-600">
-              Phone: +91 9075120325, +91 9067233111<br />
-              Email: Nema@gmail.com
+            <div className="text-sm font-semibold text-white">Contact</div>
+            <div className="mt-3 text-sm text-neutral-400 leading-relaxed">
+              Phone: +91 9075120325, +91 9067233111
+              <br />
+              Email: nema@gmail.com
             </div>
           </div>
         </div>
 
-        <div className="mt-8 text-xs text-neutral-500">
-          © {new Date().getFullYear()} NEET Excellence. All rights reserved.
+        {/* Bottom bar */}
+        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-neutral-500 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <span>
+            © {new Date().getFullYear()} NEET Excellence. All rights reserved.
+          </span>
+          <span className="text-neutral-500">
+            Designed for medical aspirants
+          </span>
         </div>
       </Container>
     </footer>

@@ -8,72 +8,70 @@ export default function Home() {
   return (
     <div>
       {/* HERO */}
-      <section className="bg-surface-muted border-b border-neutral-200">
-        <Container className="py-14 md:py-20">
-          <div className="grid gap-10 md:grid-cols-2 items-center">
-            <div>
-              <Badge variant="accent">NEET Excellence Medical Academy (NEMA)</Badge>
+<section className="relative bg-page-hero bg-cover bg-center bg-fixed border-b border-neutral-200">
+  {/* Dark overlay for readability */}
+  <div className="absolute inset-0 bg-black/60" />
 
-              <h1 className="mt-4 text-3xl md:text-5xl font-extrabold tracking-tight text-text-heading">
-                Welcome to the Best NEET Coaching Institute in Pune
-              </h1>
-              <h2 className="mt-3 text-lg md:text-2xl font-bold text-text-heading">
-                Where Strong Concepts Turn Aspirants into Medical Rankers
-              </h2>
+  <Container className="relative py-14 md:py-20">
+    <div className="grid gap-10 md:grid-cols-2 items-center text-white">
+      {/* LEFT CONTENT */}
+      <div>
+        <Badge variant="accent">NEET Excellence Medical Academy (NEMA)</Badge>
 
-              <p className="mt-4 text-text-body leading-relaxed">
-                At NEET Excellence Medical Academy (NEMA), we don’t believe in shortcuts or
-                rote learning. With 15+ years of experience in NEET (UG) coaching, we provide
-                concept-driven teaching, error-free study material, and personalised mentoring
-                that helps students crack NEET with confidence.
-              </p>
+        <h1 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
+          Welcome to the Best NEET Coaching Institute in Pune
+        </h1>
 
-              <p className="mt-4 text-text-body leading-relaxed">
-                Our small-batch system, NCERT-focused approach, regular testing, and
-                performance analysis ensure every student gets the attention they deserve—whether
-                they are in Foundation, Class 11–12, or Dropper batches.
-              </p>
+        <h2 className="mt-3 text-lg md:text-2xl font-bold text-neutral-200">
+          Where Strong Concepts Turn Aspirants into Medical Rankers
+        </h2>
 
-              <p className="mt-4 text-text-body leading-relaxed">
-                If your goal is AIIMS, Government Medical Colleges, or top ranks in NEET,
-                your journey starts here.
-              </p>
+        <p className="mt-4 text-neutral-200 leading-relaxed">
+          At NEET Excellence Medical Academy (NEMA), we don’t believe in shortcuts or
+          rote learning. With 15+ years of experience in NEET (UG) coaching, we provide
+          concept-driven teaching, error-free study material, and personalised mentoring
+          that helps students crack NEET with confidence.
+        </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link to="/admission">
-                  <Button>Enquire Now</Button>
-                </Link>
-                <Link to="/courses">
-                  <button className="rounded-xl px-4 py-2 text-sm font-semibold border-2 border-brand-primary text-brand-primary hover:bg-brand-accentSoft">
-                    View Courses
-                  </button>
-                </Link>
-              </div>
+        <p className="mt-4 text-neutral-200 leading-relaxed">
+          If your goal is AIIMS, Government Medical Colleges, or top ranks in NEET,
+          your journey starts here.
+        </p>
 
-              <div className="mt-8 grid grid-cols-3 gap-4">
-                <Stat title="15+ Years" sub="Experience" />
-                <Stat title="Small Batches" sub="40–50 Students" />
-                <Stat title="NCERT Focus" sub="NEET Pattern" />
-              </div>
-            </div>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link to="/admission">
+            <Button className="bg-brand-primary hover:opacity-90">Enquire Now</Button>
+          </Link>
 
-            {/* Right visual */}
-            <div className="rounded-3xl border border-neutral-200 bg-white shadow-soft overflow-hidden">
-              <img
-                src={hero1}
-                alt="Institute"
-                className="h-72 md:h-96 w-full object-cover"
-              />
-              <div className="p-5">
-                <div className="font-semibold text-text-heading">NEET Excellence Medical Academy</div>
-                <div className="text-sm text-text-muted mt-1">
-                  (Result-2025)
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+          <Link to="/courses">
+            <button className="rounded-xl px-4 py-2 text-sm font-semibold border-2 border-white text-white hover:bg-white/10">
+              View Courses
+            </button>
+          </Link>
+        </div>
+
+        <div className="mt-8 grid grid-cols-3 gap-4">
+          <Stat title="15+ Years" sub="Experience" />
+          <Stat title="Small Batches" sub="40–50 Students" />
+          <Stat title="NCERT Focus" sub="NEET Pattern" />
+        </div>
+      </div>
+
+      {/* RIGHT CARD */}
+      <div className="rounded-3xl border border-white/20 bg-white shadow-soft overflow-hidden text-black">
+        <img
+          src={hero1}
+          alt="NEET Excellence Medical Academy"
+          className="h-72 md:h-96 w-full object-cover"
+        />
+        <div className="p-5">
+          <div className="font-semibold">NEET Excellence Medical Academy</div>
+          <div className="text-sm text-neutral-500 mt-1">(Results – 2025)</div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
 
       {/* ABOUT SNAPSHOT */}
       <section className="py-12">
@@ -171,7 +169,7 @@ export default function Home() {
               </div>
             </div>
             <Link to="/admission">
-              <Button className="px-6 py-3">Admission / Enquiry</Button>
+              <Button className="bg-brand-primary hover:text-black rounded-xl border border-neutral-300 hover:bg-white">Admission / Enquiry</Button>
             </Link>
           </div>
         </Container>
@@ -198,8 +196,8 @@ function SectionHeader({ title, subtitle, actionText, actionTo }) {
 
 function Stat({ title, sub }) {
   return (
-    <div className="rounded-2xl bg-white border border-neutral-200 p-4">
-      <div className="text-lg font-bold text-text-heading">{title}</div>
+    <div className="rounded-xl bg-white border border-neutral-200 p-2">
+      <div className="text-lg font-semibold text-text-heading">{title}</div>
       <div className="text-xs text-text-muted">{sub}</div>
     </div>
   );
