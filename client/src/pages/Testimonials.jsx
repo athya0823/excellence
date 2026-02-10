@@ -36,14 +36,8 @@ export default function Testimonials() {
         </Container>
       </section> */}
 <section
-  className="relative border-b border-neutral-200"
-  style={{
-    backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="absolute inset-0 bg-black/50"></div>
+  className="relative bg-page-hero bg-cover bg-center bg-fixed border-b border-neutral-200">
+    <div className="absolute inset-0 bg-black/60" />
 
   <div className="relative z-10">
     <Container className="py-12 md:py-16 text-white">

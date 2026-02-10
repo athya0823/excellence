@@ -22,13 +22,8 @@ export default function Gallery() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative border-b border-neutral-200"
-  style={{
-    backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}>
-    <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative bg-page-hero bg-cover bg-center bg-fixed border-b border-neutral-200">
+    <div className="absolute inset-0 bg-black/60" />
 
   <div className="relative z-10">
         <Container className="py-14 text-white">
@@ -65,7 +60,7 @@ export default function Gallery() {
                 className={`rounded-xl px-4 py-2 text-sm font-semibold border transition
                   ${
                     activeTag === t
-                      ? "bg-brand-primary text-white hover:text-black hover:bg-white border-black"
+                      ? "bg-white text-black hover:text-black hover:bg-white border-black"
                       : "bg-brand-primary text-white hover:text-black  hover:bg-white"
                   }`}
               >

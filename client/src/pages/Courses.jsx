@@ -29,13 +29,8 @@ export default function Courses() {
   return (
     <div>
       {/* Header strip */}
-      <section className="relative border-b border-neutral-200"
-  style={{
-    backgroundImage: "url('/src/assets/gallery/classroom-2.jpeg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}>
-    <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative bg-page-hero bg-cover bg-center bg-fixed border-b border-neutral-200">
+    <div className="absolute inset-0 bg-black/60" />
     <div className="relative z-10">
         <Container className="py-14 text-white">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
