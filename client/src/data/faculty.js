@@ -1,7 +1,7 @@
 import nishantPhoto from "../assets/faculty/nishant-physics.jpeg";
 import sarveshPhoto from "../assets/faculty/sarvesh-chemistry.jpeg";
 import bhaveshPhoto from "../assets/faculty/bhavesh-biology.jpeg";
-import madhumatiPhoto from "../assets/faculty/madhumati-biology.jpeg";
+import madhumatiPhoto from "../assets/faculty/madhumati-Biology.jpeg";
 // import raviPhoto from "../assets/faculty/ravi-maths.jpg";
 
 
@@ -110,3 +110,4 @@ export const faculty = [
     ],
   },
 ];
+
