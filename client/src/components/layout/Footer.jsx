@@ -11,8 +11,7 @@ export default function Footer() {
               NEET Excellence Medical Academy
             </div>
             <div className="mt-3 text-sm text-neutral-400 leading-relaxed">
-              Temporary footer content — will be replaced with final institute
-              description, address, and social links.
+              From Aspirant to Doctor
             </div>
           </div>
 
@@ -39,7 +38,7 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold text-white">Contact</div>
             <div className="mt-3 text-sm text-neutral-400 leading-relaxed">
-              Phone: +91 9075120325, +91 9067233111
+              Phone: +91 9067233111, +91 9075120325
               <br />
               Email: nema@gmail.com
             </div>
@@ -49,7 +48,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 border-t border-white/10 pt-6 text-xs text-neutral-500 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <span>
-            © {new Date().getFullYear()} NEET Excellence. All rights reserved.
+            © {new Date().getFullYear()} MED-JEE. All rights reserved.
           </span>
           <span className="text-neutral-500">
             Designed for medical aspirants

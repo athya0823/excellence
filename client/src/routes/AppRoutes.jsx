@@ -16,6 +16,7 @@ import FAQs from "../pages/FAQs";
 import Contact from "../pages/Contact";
 import Admission from "../pages/Admission";
 import NotFound from "../pages/NotFound";
+// import FacultyDetails from "../pages/FacultyDetails";
 
 const AppRoutes = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const AppRoutes = createBrowserRouter([
       { path: "courses", element: <Courses /> },
       { path: "courses/:slug", element: <CourseDetails /> },
       { path: "faculty", element: <Faculty /> },
+      // { path: "/faculty/:id", element: <FacultyDetails  /> },
       { path: "results", element: <Results /> },
       { path: "testimonials", element: <Testimonials /> },
       { path: "gallery", element: <Gallery /> },

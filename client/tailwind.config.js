@@ -25,6 +25,7 @@ export default {
       },
       backgroundImage: {
         "page-hero": "url('/src/assets/gallery/classroom-2.jpeg')",
+        "page-down": "url('/scr/assets/gallery/classroom-3.jpeg')",
       },
     },
   },
