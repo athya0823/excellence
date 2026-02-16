@@ -132,6 +132,7 @@ export default function Contact() {
                       href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
                     >
                       {siteConfig.phone}
+                      {siteConfig.phone2}
                     </a>
                   </div>
 
@@ -289,3 +290,4 @@ function MiniInfo({ title, value }) {
     </div>
   );
 }
+
