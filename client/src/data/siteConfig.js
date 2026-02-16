@@ -3,7 +3,8 @@ export const siteConfig = {
   tagline: "From Aspirant to Doctor",
 
   // Contact (from client)
-  phone: "+91 9067233111, +91 9075120325",
+  phone1: "+91 9067233111",
+  phone2: "+91 9075120325",
   email: "nema.info7@gmail.com",
   whatsapp: "https://wa.me/919067233111", // derived from phone
 
@@ -13,3 +14,4 @@ export const siteConfig = {
 
   contactPerson: "Nishant Kumar Singh"
 };
+
