@@ -23,7 +23,7 @@ export default function Header() {
         <Container className="py-2">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
-              <span className="opacity-95">📞 {siteConfig.phone1}</span>
+              <span className="opacity-95">📞 {siteConfig.phone}</span>
               <span className="opacity-95">📞 {siteConfig.phone2}</span>
               <span className="opacity-95">✉️ {siteConfig.email}</span>
               <span className="opacity-80">📍 {siteConfig.addressShort}</span>
@@ -144,4 +144,5 @@ export default function Header() {
     </header>
   );
 }
+
 
